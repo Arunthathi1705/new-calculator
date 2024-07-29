@@ -1,0 +1,109 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    font-size: 1.5rem;
+    
+}
+.container{
+    border:3px solid rgb(97, 94, 94);
+    height:400px;
+    width:300px;
+    border-radius: 10px;
+    background-color:#d9dcd5f5; 
+}
+
+.inputs{
+    margin-bottom:5px;
+    border-bottom:2px solid black;
+    border-bottom-left-radius:7px ;
+    border-bottom-right-radius: 7px;
+}
+.inputs input{
+    width:100%;
+    height:60px;
+    font-size: 1.5rem;
+    border-radius: 7px;
+    text-align: right;
+    padding:5px;
+}
+.operator{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows: repeat(5,auto);
+    gap:2px;
+    row-gap: 6px;
+    padding-left:8px;
+}
+ 
+button{
+    font-size: 1.5rem;
+    height: 60px;
+    width:60px;
+    border:none;
+    background-color:aliceblue;
+    cursor:pointer;
+    box-shadow: inset 2px 2px rgba(0, 0, 0, 0.229);
+}
+ .equal{
+   background-color:#6ca0f3;
+   color: white;
+   grid-column: span 2; 
+   width: calc(100% - 10px); 
+   
+   }
+   
+.equal:hover{
+    background-color: #3a69b4;;
+}
+
+button:hover{
+    background-color:rgb(206, 210, 213) ;
+}
+
+
+/*Media Query*/
+
+
+@media screen and (min-width:800px)
+{
+    .container{
+        background-color: #d1d4d6f5;
+        border:3px solid black ;
+        width:600px;
+        height:500px;
+    }
+    .operator{
+        padding-left:13px
+    }
+    .inputs input{
+        width:100%;
+        height:60px;
+        font-size: 2rem;
+        border-radius: 8px;
+        text-align: right;
+        padding:5px;
+    }
+    button{
+        background-color: rgb(232, 236, 239);
+        font-size:2rem;
+        height: 80px;
+        width:130px;
+        border:none;
+        cursor:pointer;
+        box-shadow: inset 3px 3px rgba(0, 0, 0, 0.229);
+    }
+    button:hover{
+        background-color: rgb(192, 198, 203) ;
+    };
+    }
+    .equal{
+        background-color:#5a84c9 ;
+    }
